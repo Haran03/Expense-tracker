@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="move">
+  <div class="b"> 
+<div><center>
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox" class="checkbox-label">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <span class="ball"></span>
+    </label>
+  </div><center>
+    <div class="header">
+        <marquee><h1>Expense Tracker</h1></marquee>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="card">
+                <p style="font-size: 20px;">Your Current Balance</p>
+                <h3><span id="symbol">$</span><span id="balance">0</span></h3>
+            </div>
+
+
+            <div class="form">
+                <h3>Add new transaction</h3>
+
+                <div class="form-group">
+                    <label for="transaction_name">Name</label>
+                    <input type="text" name="transaction_name" placeholder="My Salary" id="transaction_name">
+                </div>
+
+                <div class="form-group radio">
+                    <label for="transactiontype">Type</label>
+                    <div class="radio_group">
+                        <input type="radio" value="income" name="transactiontype" id="income" checked>
+                        <label for="transactiontype">Income</label>
+                    </div>
+                    <div class="radio_group">
+                        <input type="radio" value="expense" name="transactiontype" id="expense" placeholder="Expense">
+                        <label for="transactiontype">Expense</label>          
+                    </div>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label for="transactionamount">Amount</label>
+                    <input type="number" placeholder="300" name="transactionamount" id="transactionamount">
+                </div>
+
+                <button class="btn btn-block" id="add_transaction">Add Transaction</button>
+
+                <button class="btn btn-block" id="cancel_edit" onclick="cancelEdit()">Cancel Edit</button>
+
+            </div>
+
+            <p class="second_heading" id="change" >Your Transactions:</p>   
+
+            <div class="conatiner-list-of-transactions">
+                
+                <ul id="list_of_transactions">
+                    <li class="transaction_income">
+                        <p class="no">No transactions Found</p> 
+                        <div class="right">
+                            
+                            <button class="link">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="link">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</div>
+</div>
+</body>
+</html>
